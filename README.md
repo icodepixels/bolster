@@ -11,19 +11,19 @@ The Mirage server is in [src/server.js](./src/server.js). The test is in [tests/
 Pull down the repo and install deps:
 
 ```sh
-git clone git@github.com:miragejs/examples.git
-cd examples/vue-axios-test-utils
+git clone https://github.com/icodepixels/bolster.git
+cd bolster
 yarn
 ```
 
 To run this app in development against a local Mirage server:
 
 ```sh
-yarn serve
+npm run serve
 ```
 
 To run the Vue Test Utils test:
 
 ```sh
-yarn test:unit
+npm run test:unit
 ```
