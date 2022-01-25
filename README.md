@@ -13,7 +13,7 @@ Pull down the repo and install deps:
 ```sh
 git clone https://github.com/icodepixels/bolster.git
 cd bolster
-yarn
+npm i
 ```
 
 To run this app in development against a local Mirage server:
