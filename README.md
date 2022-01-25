@@ -1,4 +1,4 @@
-# Vue Local Dev and Vue Test Utils with Axios
+# Bolster - Vue with Axios & Mirage
 
 This Vue app is set up with Mirage for both local development and UI testing with Vue Test Utils.
 
