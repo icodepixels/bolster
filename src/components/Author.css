@@ -17,6 +17,7 @@
 }
 .Author__bio {
   text-align: left;
+  margin-top: 16px;
 }
 .Author__bio--label {
   font-weight: bold;
