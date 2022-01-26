@@ -5,8 +5,8 @@
       <v-button
         :onClick="edit"
         class="ExperienceReadOnly__editBtn"
-        v-bind:buttonTitle="buttonTitle"
-        v-bind:buttonClass="buttonClass"
+        :buttonTitle="buttonTitle"
+        :buttonClass="buttonClass"
       />
     </div>
     <div class="ExperienceReadOnly__title">
@@ -18,41 +18,7 @@
 </template>
 
 <style>
-.fade-in-image {
-  animation: fadeIn 2s;
-}
-@keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-.ExperienceReadOnly {
-  border-bottom: 1px solid #81b247;
-  padding: 16px;
-  position: relative;
-}
-.ExperienceReadOnly:last-child {
-  border-bottom: 0;
-}
-.ExperienceReadOnly__companyContainer {
-  display: flex;
-  justify-content: space-between;
-}
-.ExperienceReadOnly__editBtn:hover {
-  cursor: pointer;
-  color: #1b240e;
-  transition: color 0.3s ease-in;
-}
-.ExperienceReadOnly__editBtn {
-  background: transparent;
-  border: 0;
-  color: #81b247;
-  outline: none;
-}
-.ExperienceReadOnly__title {
-  align-items: baseline;
-  display: flex;
-  justify-content: space-between;
-}
+  @import './ExperienceReadOnly.css';
 </style>
 
 <script>

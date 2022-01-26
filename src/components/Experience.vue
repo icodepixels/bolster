@@ -1,8 +1,8 @@
 <template>
   <div class="Experience">
     <component
-      v-bind:is="component"
-      v-bind:experience="experience"
+      :is="component"
+      :experience="experience"
       :edit="handleClick"
       :buttonTitle="buttonTitle"
       :handleClose="handleClose"
@@ -12,33 +12,7 @@
 </template>
 
 <style>
-.Experience {
-  border-bottom: 1px solid #81b247;
-  padding: 16px;
-}
-.Experience:last-child {
-  border-bottom: 0;
-}
-.Experience__companyContainer {
-  display: flex;
-  justify-content: space-between;
-}
-.Experience__editBtn:hover {
-  cursor: pointer;
-  color: #1b240e;
-  transition: color 0.3s ease-in;
-}
-.Experience__editBtn {
-  background: transparent;
-  border: 0;
-  color: #81b247;
-  outline: none;
-}
-.Experience__title {
-  align-items: baseline;
-  display: flex;
-  justify-content: space-between;
-}
+  @import './Experience.css';
 </style>
 
 <script>

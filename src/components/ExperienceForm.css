@@ -1,0 +1,49 @@
+.ExperienceForm {
+}
+.ExperienceForm__actions {
+  display: flex;
+}
+.ExperienceForm__button:first-child {
+  margin-right: 16px;
+}
+.ExperienceForm__error {
+  font-size: 0.7em;
+  color: red;
+  margin-bottom: 16px;
+}
+.ExperienceForm__title {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
+.ExperienceForm__input {
+  padding: 8px;
+  color: #1b240e;
+  border: 1px solid #81b247;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+}
+.ExperienceForm__input:error {
+  border-color: red;
+}
+.ExperienceForm__input--error {
+  border-color: red;
+}
+.ExperienceForm__textarea {
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  resize: none;
+}
+.fade-in-image {
+  animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

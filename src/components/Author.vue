@@ -10,30 +10,7 @@
 </template>
 
 <style>
-.Author {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  max-width: 300px;
-  padding: 16px;
-}
-.Author__picture {
-  border-radius: 200px;
-  width: 70%;
-}
-.Author__name {
-  font-size: 1.5em;
-  font-weight: bold;
-  text-align: center;
-}
-.Author__bio {
-  text-align: left;
-}
-.Author__bio--label {
-  font-weight: bold;
-  text-align: left;
-}
+  @import './Author.css';
 </style>
 
 <script>

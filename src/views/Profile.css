@@ -1,0 +1,34 @@
+
+.fade-in-image {
+  animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.Profile__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: auto;
+  max-width: 1024px;
+}
+.Profile__experience {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+.Profile__actions {
+  display: flex;
+}
+.Profile__actionsContainer {
+  margin: 24px 0;
+  padding: 0 16px;
+}
+.Profile__button {
+  max-width: 300px;
+}

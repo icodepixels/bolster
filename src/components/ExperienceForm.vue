@@ -1,5 +1,5 @@
 <template>
-  <form class="ExperienceForm">
+  <form class="ExperienceForm fade-in-image" @submit.prevent="submit">
     <input
       type="text"
       placeholder="company"
@@ -12,7 +12,7 @@
     <div
       v-if="error && !experience.company"
       class="ExperienceForm__error"
-      v-bind:key="this.errors.company"
+      :key="this.errors.company"
     >{{ this.errors.company }}</div>
     <div class="ExperienceForm__title">
       <div>
@@ -28,7 +28,7 @@
         <div
           v-if="error && !experience.title"
           class="ExperienceForm__error"
-          v-bind:key="this.errors.title"
+          :key="this.errors.title"
         >{{ this.errors.title }}</div>
       </div>
       <div>
@@ -44,7 +44,7 @@
         <div
           v-if="error && !experience.dates"
           class="ExperienceForm__error"
-          v-bind:key="this.errors.dates"
+          :key="this.errors.dates"
         >{{ this.errors.dates }}</div>
       </div>
     </div>
@@ -60,70 +60,34 @@
     <div
       v-if="error && !experience.description"
       class="ExperienceForm__error"
-      v-bind:key="this.errors.description"
+      :key="this.errors.description"
     >{{ this.errors.description }}</div>
 
     <div v-if="errors.length" class="ExperienceForm__error">
       <span>Please correct the following error(s):</span>
       <ul class="ExperienceForm__error--list">
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+        <li v-for="error in errors" :key="error">{{ error }}</li>
       </ul>
     </div>
     <div class="ExperienceForm__actions">
       <v-button
         :onClick="checkForm"
         class="ExperienceForm__button"
-        v-bind:buttonTitle="buttonTitle"
-        v-bind:buttonClass="buttonClass"
+        :buttonTitle="buttonTitle"
+        :buttonClass="buttonClass"
       />
       <v-button
         :onClick="handleClose"
         class="ExperienceForm__button"
-        v-bind:buttonTitle="buttonCloseTitle"
-        v-bind:buttonClass="buttonCloseClass"
+        :buttonTitle="buttonCloseTitle"
+        :buttonClass="buttonCloseClass"
       />
     </div>
   </form>
 </template>
 
 <style>
-.ExperienceForm {
-}
-.ExperienceForm__actions {
-  display: flex;
-}
-.ExperienceForm__button:first-child {
-  margin-right: 16px;
-}
-.ExperienceForm__error {
-  font-size: 0.7em;
-  color: red;
-  margin-bottom: 16px;
-}
-.ExperienceForm__title {
-  align-items: baseline;
-  display: flex;
-  justify-content: space-between;
-}
-.ExperienceForm__input {
-  padding: 8px;
-  color: #1b240e;
-  border: 1px solid #81b247;
-  border-radius: 4px;
-  margin: 8px 0;
-  outline: none;
-}
-.ExperienceForm__input:error {
-  border-color: red;
-}
-.ExperienceForm__input--error {
-  border-color: red;
-}
-.ExperienceForm__textarea {
-  width: 100%;
-  max-width: 483px;
-  min-height: 100px;
-}
+  @import './ExperienceForm.css';
 </style>
 
 <script>

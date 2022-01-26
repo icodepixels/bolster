@@ -1,28 +1,28 @@
 <template>
-  <div class="ProfilePage">
+  <div class="Profile">
     <p v-if="!profile">Loading...</p>
-    <div class="ProfilePage__container fade-in-image" v-if="profile">
+    <div class="Profile__container fade-in-image" v-if="profile">
       <v-author :name="profile.name" :bio="profile.bio" :picture="profile.picture" />
-      <div class="ProfilePage__experience">
+      <div class="Profile__experience">
         <v-experience
           v-for="experience in profile.experience"
-          v-bind:experience="experience"
-          v-bind:index="experience.id"
-          v-bind:key="experience.id"
+          :experience="experience"
+          :index="experience.id"
+          :key="experience.id"
         />
-        <div class="ProfilePage__actionsContainer">
+        <div class="Profile__actionsContainer">
           <component
-            v-bind:is="componentForm"
+            :is="componentForm"
             :handleClose="handleClose"
             :handleSubmit="handleSubmit"
           />
-          <div class="ProfilePage__actions">
+          <div class="Profile__actions">
             <v-button
+              class="Profile__button"
               :onClick="handleClick"
-              class="ProfilePage__button"
-              v-bind:buttonTitle="buttonTitle"
-              v-bind:buttonClass="buttonClass"
-              v-bind:is="buttonExperience"
+              :buttonTitle="buttonTitle"
+              :buttonClass="buttonClass"
+              :is="buttonExperience"
             />
           </div>
         </div>
@@ -32,37 +32,7 @@
 </template>
 
 <style>
-.fade-in-image {
-  animation: fadeIn 2s;
-}
-@keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-.ProfilePage {
-}
-.ProfilePage__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: auto;
-  max-width: 1024px;
-}
-.ProfilePage__experience {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-}
-.ProfilePage__actions {
-  display: flex;
-}
-.ProfilePage__actionsContainer {
-  margin: 24px 0;
-  padding: 0 16px;
-}
-.ProfilePage__button {
-  max-width: 300px;
-}
+  @import './Profile.css';
 </style>
 
 <script>
@@ -73,7 +43,7 @@ import Experience from "../components/Experience";
 import ExperienceForm from "../components/ExperienceForm";
 
 export default {
-  name: "ProfilePage",
+  name: "Profile",
   data: function () {
     return {
       buttonTitle: "Add Experience",
