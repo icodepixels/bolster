@@ -22,6 +22,13 @@ To run this app in development against a local Mirage server:
 npm run dev
 ```
 
+To run the Linting Utils:
+
+```sh
+npm run lint
+```
+
+
 To run the Vue Test Utils test:
 
 ```sh
