@@ -19,7 +19,7 @@ npm i
 To run this app in development against a local Mirage server:
 
 ```sh
-npm run serve
+npm run dev
 ```
 
 To run the Vue Test Utils test:
